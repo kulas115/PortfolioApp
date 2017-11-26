@@ -7,6 +7,10 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.new
   end
 
+  def show
+    @portfolio_item = Portfolio.find(params[:id])
+  end
+
   def create
     @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
 
@@ -23,7 +27,7 @@ class PortfoliosController < ApplicationController
 
   def update
     @portfolio_item = Portfolio.find(params[:id])
-    
+
     if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
       redirect_to portfolios_path, notice: 'The record successfully updated.'
     else
