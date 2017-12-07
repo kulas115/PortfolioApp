@@ -5,7 +5,16 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    #binding.pry
+    @blogs = Blog.special_blogs
+    #binding.pry
+    @blogs = Blog.featured_blogs
+    #binding.pry
+    #byebug
+
+    #puts "*" * 500
+    #puts @blogs.inspect
+    #puts "*" * 500
     @page_title = "My Portfolio Blog"
   end
 

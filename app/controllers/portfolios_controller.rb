@@ -1,8 +1,11 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :update, :destroy, :show]
   layout 'portfolio'
 
   def index
     @portfolio_items = Portfolio.all
+    @base_uri = "https://pairguru-api.herokuapp.com/"
+    @response = HTTParty.get("https://pairguru-api.herokuapp.com/api/v1/movies/Godfather")
   end
 
   def angular
@@ -15,7 +18,6 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def create
@@ -29,12 +31,9 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def update
-    @portfolio_item = Portfolio.find(params[:id])
-
     if @portfolio_item.update(portfolio_params)
       redirect_to portfolios_path, notice: 'The record successfully updated.'
     else
@@ -43,7 +42,6 @@ class PortfoliosController < ApplicationController
   end
 
   def destroy
-    @portfolio_item = Portfolio.find(params[:id])
     @portfolio_item.destroy
     redirect_to portfolios_path, notice: 'Portfolio was destroyed'
   end
@@ -56,5 +54,9 @@ class PortfoliosController < ApplicationController
                                       :body,
                                       technologies_attributes: [:name]
                                      )
+  end
+
+  def set_portfolio_item
+    @portfolio_item = Portfolio.find(params[:id])
   end
 end

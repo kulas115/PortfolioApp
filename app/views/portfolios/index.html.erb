@@ -3,3 +3,8 @@
 <%= link_to "Create New Item", new_portfolio_path %>
 
 <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+
+<hr>
+
+<p><%= @response['data']['attributes']['title'] %> </p>
+<p><%= image_tag @base_uri+@response['data']['attributes']['poster'] %></p>
