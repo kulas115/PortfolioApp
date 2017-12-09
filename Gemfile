@@ -67,4 +67,6 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 
 gem 'httparty'
 
-gem 'kulas_view_tool', git: 'https://github.com/kulas115/kulas_view_tool'
+#gem 'kulas_view_tool', git: 'https://github.com/kulas115/kulas_view_tool'
+
+gem 'kulas_view_tool', '~> 0.1.0'
