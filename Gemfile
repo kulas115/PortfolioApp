@@ -70,3 +70,5 @@ gem 'httparty'
 #gem 'kulas_view_tool', git: 'https://github.com/kulas115/kulas_view_tool'
 
 gem 'kulas_view_tool', '~> 0.1.0'
+
+gem 'petergate', '~>1.7'
