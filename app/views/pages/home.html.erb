@@ -1,20 +1,36 @@
-<h1>Hi, <%= current_user.first_name %></h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="site-wrapper">
 
-<div class="wrapper">
-  <div class="item1">1</div>
-  <div class="item2">2</div>
-  <div class="item3">3</div>
-  <div class="item4">4</div>
-  <div class="item5">5</div>
-  <div class="item6">6</div>
-</div>
+      <div class="site-wrapper-inner">
 
-<%= @posts.inspect %>
-<%= @skills.inspect %>
+        <div class="cover-container">
 
-<hr>
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Cover</h3>
+              <nav class="nav nav-masthead">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Contact</a>
+              </nav>
+            </div>
+          </div>
 
-<%= content_tag :p, class: "my-special-class" do %>
-  Hi, I'm in a paragraph tag.
-<% end %>
+          <div class="inner cover">
+            <h1 class="cover-heading">Cover your page.</h1>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
