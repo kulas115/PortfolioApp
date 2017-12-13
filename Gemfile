@@ -72,3 +72,7 @@ gem 'httparty'
 gem 'kulas_view_tool', '~> 0.1.0'
 
 gem 'petergate', '~>1.7'
+
+gem 'font-awesome-rails', '~> 4.7'
+
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
