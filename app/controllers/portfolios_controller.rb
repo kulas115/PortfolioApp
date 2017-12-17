@@ -4,9 +4,7 @@ class PortfoliosController < ApplicationController
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   def index
-    @portfolio_items = Portfolio.all
-    @base_uri = "https://pairguru-api.herokuapp.com/"
-    @response = HTTParty.get("https://pairguru-api.herokuapp.com/api/v1/movies/Godfather")
+    @portfolio_items = Portfolio.by_position
   end
 
   def angular
