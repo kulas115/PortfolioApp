@@ -1,12 +1,18 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:edit, :update, :destroy, :show]
   layout 'portfolio'
-  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
   def index
-    @portfolio_items = Portfolio.all
-    @base_uri = "https://pairguru-api.herokuapp.com/"
-    @response = HTTParty.get("https://pairguru-api.herokuapp.com/api/v1/movies/Godfather")
+    @portfolio_items = Portfolio.by_position
+  end
+
+  def sort
+    params[:order]. each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    head :ok #stating that we are aware no templates are present for this
   end
 
   def angular
