@@ -7,4 +7,17 @@
   <p>
     <%= @blog.body %>
   </p>
+
+  <% unless current_user.is_a? GuestUser %>
+    <%= form_with model: @comment, url: '#' do |form| %>
+      <div class="form-group">
+        <%= form.label :content %>
+        <%= form.text_area :content, id: :content,  class: 'form-control' %>
+      </div>
+
+      <%= form.submit 'Post Comment', class: 'btn btn-primary' %>
+    <% end %>
+  <% end %>
+
+  <%= render @blog.comments %>
 </div>
