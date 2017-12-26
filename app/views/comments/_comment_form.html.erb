@@ -1,0 +1,10 @@
+<% unless current_user.is_a? GuestUser %>
+  <%= form_with model: @comment, url: '#', id: :new_comment, class: :new_comment do |form| %>
+    <div class="form-group">
+      <%= form.label :content %>
+      <%= form.text_area :content, id: :comment_content,  class: 'form-control' %>
+    </div>
+
+    <%= form.submit 'Post Comment', class: 'btn btn-primary' %>
+  <% end %>
+<% end %>
