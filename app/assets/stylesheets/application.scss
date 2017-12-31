@@ -133,7 +133,7 @@ body {
 
 @media (min-width: 40em) {
   /* Pull out the header and footer */
-  .masthead {
+/*  .masthead {
     position: fixed;
     top: 0;
   }
@@ -249,5 +249,15 @@ body {
 }
 
 .card-job {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.skills {
+  text-align: left;
+}
+
+.skill {
   margin-top: 10px;
+  margin-bottom: 5px;
 }
