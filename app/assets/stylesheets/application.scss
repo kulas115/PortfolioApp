@@ -164,9 +164,14 @@ body {
  * Custom styles
  */
 
-.card-block {
+.card-block-left {
   color: black;
   text-align: left;
+  padding: 20px;
+}
+
+.card-block {
+  color: black;
   padding: 20px;
 }
 
@@ -219,4 +224,27 @@ body {
 
 .tech-news > .card {
   padding: 20px;
+}
+
+.app-card-container {
+  color: black;
+}
+
+.app-card-container > .card {
+
+}
+
+.profile-image {
+  border: 1px solid grey;
+  margin-bottom: 10px;
+}
+
+.app-card-container a {
+  color:blue;
+}
+
+
+.map {
+    flex: 1 1 auto;
+    display: flex; /* new */
 }
