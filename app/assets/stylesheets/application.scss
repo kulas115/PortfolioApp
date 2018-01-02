@@ -30,43 +30,47 @@ a:hover {
 html,
 body {
   height: 100%;
+  font-family: 'Lato', sans-serif;
 }
+
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  min-height: 100vh;
 }
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
 .cover-container {
-  margin-right: auto;
-  margin-left: auto;
+  min-height:100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-/* Padding for spacing */
 .inner {
-  padding: 2rem;
+margin: auto;
+
 }
 
+.mastfoot {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto Slab', serif;
+}
 
 /*
  * Header
  */
 
 .masthead {
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
 }
 
 .masthead-brand {
@@ -94,7 +98,7 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
+/*
 @media (min-width: 48em) {
   .masthead-brand {
     float: left;
@@ -105,52 +109,12 @@ body {
 }
 
 
-/*
- * Cover
- */
-
-.cover {
-  padding: 0 1.5rem;
-}
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: bold;
-}
-
-
-/*
- * Footer
- */
-
-.mastfoot {
-  color: rgba(255,255,255,.5);
-}
-
-
-/*
- * Affix and center
- */
-
-@media (min-width: 40em) {
-  /* Pull out the header and footer */
-/*  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
+/* Handle the widths */
+.masthead,
+.mastfoot,
+.cover-container {
+  width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  margin: auto;
 }
 
 @media (min-width: 62em) {
@@ -160,6 +124,7 @@ body {
     width: 55rem;
   }
 }
+
 /*
  * Custom styles
  */
@@ -227,11 +192,11 @@ body {
 }
 
 .app-card-container {
+  grid-row-start: 2;
+  grid-row-end: 3;
   color: black;
-}
-
-.app-card-container > .card {
-
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .profile-image {
@@ -260,4 +225,18 @@ body {
 .skill {
   margin-top: 10px;
   margin-bottom: 5px;
+}
+
+.cover {
+  padding: 2rem;
+}
+
+.masthead > .container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mastfoot > .inner {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
