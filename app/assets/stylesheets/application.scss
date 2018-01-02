@@ -1,6 +1,16 @@
 @import "bootstrap";
 @import "gritter";
 
+@font-face {
+  font-family: 'Lato';
+  src:font-url('Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src:font-url('RobotoSlab-Regular.ttf');
+}
+
 /*
  * Globals
  */
