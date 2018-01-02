@@ -2,6 +2,16 @@
 @import "font-awesome";
 @import "gritter";
 
+@font-face {
+  font-family: 'Lato';
+  src:font-url('Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src:font-url('RobotoSlab-Regular.ttf');
+}
+
 /*
  * Globals
  */
@@ -13,8 +23,7 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #555;
+  font-family: 'Lato', sans-serif;
 }
 
 h1, .h1,
@@ -23,7 +32,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Robot Slab", serif;
   font-weight: normal;
   color: #333;
 }
@@ -190,4 +199,25 @@ h6, .h6 {
 
 .comment-name {
   font-weight: 700;
+}
+
+.float-md-right {
+  text-align: right;
+}
+
+.breadcrumb {
+  background-color: #f5f5f5;
+}
+
+.blogcrumb a {
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
+}
+
+.blog-nav {
+  margin-bottom: 30px;
+}
+
+.blog-sidebar-source {
+  margin-top: 20px;
 }
