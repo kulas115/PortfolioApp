@@ -93,7 +93,7 @@ gem 'gritter', '~> 1.2'
 
 gem 'twitter', '~> 6.2'
 
-gem 'redis', '~> 4.0', '>= 4.0.1'
+gem 'redis', '3.3.5'
 
 gem 'redcarpet', '~> 3.4'
 
