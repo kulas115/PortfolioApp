@@ -77,13 +77,19 @@ h6, .h6 {
 }
 
 .cover-container {
-  min-height:100vh;
+  height: 100%;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 
+.cover-heading {
+
+}
+
 .inner {
 margin: auto;
+
 
 }
 
@@ -244,8 +250,8 @@ margin: auto;
   margin-bottom: 10px;
 }
 
-.app-card-container a {
-  color: #fff;
+.card-contact-about a {
+  color: $ash;
 }
 
 .map {
@@ -320,4 +326,8 @@ margin: auto;
 
 .center {
   justify-content: center;
+}
+
+.button-full-width {
+  width: 100%;
 }
