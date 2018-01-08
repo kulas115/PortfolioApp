@@ -55,7 +55,6 @@ body {
   color: $carbon;
   text-align: center;
   min-height: 100vh;
-
 }
 
 h1, .h1,
@@ -74,7 +73,6 @@ h6, .h6 {
 
 .site-wrapper {
   background-color: #42413d;
-
 }
 
 .cover-container {
@@ -91,8 +89,6 @@ h6, .h6 {
 
 .inner {
 margin: auto;
-
-
 }
 
 .mastfoot {
@@ -135,18 +131,6 @@ margin: auto;
   color: #ffce2b;
   border-bottom-color: #ffce2b;
 }
-/*
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
-  .nav-masthead {
-    float: right;
-  }
-}
-
-
-
 
 /*
  * Custom styles
@@ -345,8 +329,12 @@ margin: auto;
     margin: auto;
   }
 
-  .nav-masthead{
+  .nav-masthead {
     font-size: 1.25rem;
+  }
+
+  .nav-masthead .nav-link {
+    padding: .5rem 0;
   }
 
   .navbar-nav {
@@ -354,8 +342,6 @@ margin: auto;
     margin-right: auto;
     width: 30%;
   }
-
-
 
   .navbar-collapse {
     margin-top: 4rem;
