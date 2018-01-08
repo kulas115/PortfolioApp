@@ -146,40 +146,7 @@ margin: auto;
 }
 
 
-/* Handle the widths */
-.masthead,
-.mastfoot,
-.cover-container {
-  width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  margin: auto;
-}
 
-@media (min-width: 62em) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 55rem;
-  }
-}
-
-@media (max-width: 720px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-    margin: auto;
-  }
-
-  .nav-masthead{
-    font-size: 1.15rem;
-  }
-
-  .navbar-nav {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-}
 
 /*
  * Custom styles
@@ -352,4 +319,45 @@ margin: auto;
 
 .button-full-width {
   width: 100%;
+}
+
+/* Handle the widths */
+.masthead,
+.mastfoot,
+.cover-container {
+  width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  margin: auto;
+}
+
+@media (min-width: 62em) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 55rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    margin: auto;
+  }
+
+  .nav-masthead{
+    font-size: 1.25rem;
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+
+
+
+  .navbar-collapse {
+    margin-top: 4rem;
+  }
 }
