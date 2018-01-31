@@ -16,6 +16,8 @@ class User < ApplicationRecord
 
   validates_presence_of :name
 
+  validates :password, length: { in: 6..20 } 
+
   has_many :comments, dependent: :destroy
 
   def first_name
