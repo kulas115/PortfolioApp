@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby "2.3.3"
 
 gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
@@ -66,4 +67,4 @@ gem 'twitter', '~> 6.2'
 gem 'redis', '3.3.5'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
-ruby "2.3.3"
+gem 'omniauth-google-oauth2'
