@@ -1,5 +1,7 @@
 @import "bootstrap";
+@import "bootstrap-social";
 @import "gritter";
+@import "font-awesome";
 
 @font-face {
   font-family: 'Lato';
@@ -136,9 +138,7 @@ margin: auto;
  * Custom styles
  */
 
-
 .card-block {
-
   padding: 20px;
 }
 
@@ -223,10 +223,6 @@ margin: auto;
   margin-bottom: 10px;
 }
 
-.card-contact-about a {
-  color: $ash;
-}
-
 .map {
     flex: 1 1 auto;
     display: flex; /* new */
@@ -264,7 +260,6 @@ margin: auto;
   background-color: #fff;
   border-width: 0px;
   padding: 2rem;
-
 }
 
 .bg-warning {
@@ -303,6 +298,15 @@ margin: auto;
 
 .button-full-width {
   width: 100%;
+}
+
+.btn-google {
+  color: white !important;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: black;
 }
 
 /* Handle the widths */
