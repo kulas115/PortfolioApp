@@ -15,11 +15,14 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[google_oauth2]
 
   validates_presence_of :name
+  validates_presence_of :email
 
-  validates :password, length: { in: 6..20 } 
+  validates :password, length: { in: 6..20 }
 
   has_many :comments, dependent: :destroy
 
+  has_many :blogs
+  
   def first_name
     self.name.split.first
   end

@@ -35,6 +35,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.7'
+  gem 'spring-commands-rspec'
   gem 'capybara'
   gem 'factory_bot_rails'
 end

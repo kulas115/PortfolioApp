@@ -31,5 +31,13 @@ module PortfolioApp
 
     config.eager_load_paths << "#{Rails.root}/lib"
     config.secret_key_base = ENV["SECRET_KEY_BASE"]
+
+    config.generators do |g|
+      g.test_framework :rspec,
+        fixtures:      false,
+        view_specs:    false,
+        helper_specs:  false,
+        routing_specs: false
+    end
   end
 end
