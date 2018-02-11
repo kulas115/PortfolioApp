@@ -8,36 +8,27 @@ RSpec.describe User, type: :model do
       password:   "foobar",
     )
   end
-
-  it "is valid with a name, email and password" do
-    expect(@user).to be_valid
+  it "has a valid factory" do
+    expect(FactoryBot.build(:user)).to be_valid
   end
 
   it "is invalid without a name" do
-    @user.name = nil
-    @user.valid?
-    expect(@user.errors[:name]).to include("can't be blank")
+    user = FactoryBot.build(:user, name: nil)
+    user.valid?
+    expect(user.errors[:name]).to include("can't be blank")
   end
 
   it "is invalid without an email address" do
-    @user.email = nil
-    @user.valid?
-    expect(@user.errors[:email]).to include("can't be blank")
+    user = FactoryBot.build(:user, email: nil)
+    user.valid?
+    expect(user.errors[:email]).to include("can't be blank")
   end
 
   it "is invalid with a duplicated email address" do
-    User.create(
-      name:     "Norville Rogers",
-      email:    "norville@example.com",
-      password: "foobar",
-    )
-    user = User.new(
-      name:     "Jane Doe",
-      email:    "norville@example.com",
-      password: "foobar",
-    )
-    user.valid?
-    expect(user.errors[:email]).to include("has already been taken")
+    user            = FactoryBot.create(:user, email: "norville@example.com")
+    user_duplicated = FactoryBot.build(:user, email: "norville@example.com")
+    user_duplicated.valid?
+    expect(user_duplicated.errors[:email]).to include("has already been taken")
   end
 
   it "is invalid with password shorter than 6 chars" do
@@ -53,11 +44,13 @@ RSpec.describe User, type: :model do
   end
 
   it "returns a user's first name as a string" do
-    expect(@user.first_name).to eq "Norville"
+    user = FactoryBot.build(:user, name: "Norville Rogers")
+    expect(user.first_name).to eq "Norville"
   end
 
   it "returns a user's last name as a string" do
-    expect(@user.last_name).to eq "Rogers"
+    user = FactoryBot.build(:user, name: "Norville Rogers")
+    expect(user.last_name).to eq "Rogers"
   end
 
 
