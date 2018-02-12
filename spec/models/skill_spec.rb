@@ -2,10 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Skill, type: :model do
   before do
-    @skill = Skill.create(
-      title:            "Rails",
-      percent_utilized: "80",
-    )
+    @skill = FactoryBot.build(:skill)
   end
 
   it "is valid with title and percent utilized" do

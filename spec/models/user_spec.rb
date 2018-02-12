@@ -2,26 +2,22 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before do
-    @user = User.new(
-      name:       "Norville Rogers",
-      email:      "norville@example.com",
-      password:   "foobar",
-    )
+    @user = FactoryBot.build(:user)
   end
   it "has a valid factory" do
-    expect(FactoryBot.build(:user)).to be_valid
+    expect(@user).to be_valid
   end
 
   it "is invalid without a name" do
-    user = FactoryBot.build(:user, name: nil)
-    user.valid?
-    expect(user.errors[:name]).to include("can't be blank")
+    @user.name = nil
+    @user.valid?
+    expect(@user.errors[:name]).to include("can't be blank")
   end
 
   it "is invalid without an email address" do
-    user = FactoryBot.build(:user, email: nil)
-    user.valid?
-    expect(user.errors[:email]).to include("can't be blank")
+    @user.email = nil
+    @user.valid?
+    expect(@user.errors[:email]).to include("can't be blank")
   end
 
   it "is invalid with a duplicated email address" do
@@ -44,13 +40,11 @@ RSpec.describe User, type: :model do
   end
 
   it "returns a user's first name as a string" do
-    user = FactoryBot.build(:user, name: "Norville Rogers")
-    expect(user.first_name).to eq "Norville"
+    expect(@user.first_name).to eq "Norville"
   end
 
   it "returns a user's last name as a string" do
-    user = FactoryBot.build(:user, name: "Norville Rogers")
-    expect(user.last_name).to eq "Rogers"
+    expect(@user.last_name).to eq "Rogers"
   end
 
 
