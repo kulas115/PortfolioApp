@@ -7,5 +7,9 @@ FactoryBot.define do
     title    { generate :title}
     body     "Portfolio body"
     subtitle ""
+
+    trait :invalid do
+      title nil
+    end
   end
 end
