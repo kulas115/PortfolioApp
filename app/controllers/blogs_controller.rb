@@ -12,13 +12,6 @@ class BlogsController < ApplicationController
     else
       @blogs = Blog.recent.published.page(params[:page]).per(5)
     end
-    #binding.pry
-    #binding.pry
-    #byebug
-
-    #puts "*" * 500
-    #puts @blogs.inspect
-    #puts "*" * 500
     @page_title = "My Portfolio Blog"
   end
 

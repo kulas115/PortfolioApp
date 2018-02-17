@@ -37,6 +37,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'spring-commands-rspec'
   gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy', '~> 2.4.3'
+  gem 'selenium-webdriver', '~> 3.9.0'
   gem 'factory_bot_rails'
 end
 
