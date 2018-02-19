@@ -34,6 +34,15 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
+end
+
+group :development do
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'spring-commands-rspec'
   gem 'capybara'
@@ -41,12 +50,9 @@ group :development, :test do
   gem 'launchy', '~> 2.4.3'
   gem 'selenium-webdriver', '~> 3.9.0'
   gem 'factory_bot_rails'
-end
-
-group :development do
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'shoulda-matchers',
+    git: 'https://github.com/thoughtbot/shoulda-matchers.git',
+    branch: 'rails-5'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
