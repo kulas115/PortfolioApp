@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Blogs", type: :feature, js: true do
+RSpec.feature "Blogs", type: :feature, js: true, slow: true do
   scenario "admin creates a new blog" do
     admin = FactoryBot.create(:admin)
     topic = FactoryBot.create(:topic)

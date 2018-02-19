@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Portfolios", type: :feature, js: true do
+RSpec.feature "Portfolios", type: :feature, js: true, slow: true do
   scenario "admin creates a new portfolio" do
     admin = FactoryBot.create(:admin)
     login_as admin, scope: :user
