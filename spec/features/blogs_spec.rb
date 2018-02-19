@@ -4,12 +4,8 @@ RSpec.feature "Blogs", type: :feature, js: true do
   scenario "admin creates a new blog" do
     admin = FactoryBot.create(:admin)
     topic = FactoryBot.create(:topic)
-
-    visit root_path
-    click_link "Login"
-    fill_in "Email",    with: admin.email
-    fill_in "Password", with: admin.password
-    click_button "Log in"
+    login_as admin, scope: :user
+    # sign_in_as admin
 
     visit blogs_path
     click_link "Write a New Blog"

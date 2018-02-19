@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Blog, type: :model do
+
   before do
-    @topic = FactoryBot.create(:topic)
     @blog =  FactoryBot.build(:blog)
   end
 
@@ -51,7 +51,7 @@ RSpec.describe Blog, type: :model do
     end
 
     context " .featured_blogs" do
-      it "returns 2 blogs" do
+      it "returns 2 featured blogs" do
         expect(Blog.featured_blogs).to include(@blog1, @blog2)
       end
     end

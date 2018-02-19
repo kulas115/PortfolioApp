@@ -1,24 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe Portfolio, type: :model do
-  before do
-    @portfolio = FactoryBot.build(:portfolio)
-  end
+  let(:portfolio) { FactoryBot.create(:portfolio) }
 
   it "is valid with title and body" do
-    expect(@portfolio).to be_valid
+    expect(portfolio).to be_valid
   end
 
   it 'is invalid without title' do
-    @portfolio.title = nil
-    @portfolio.valid?
-    expect(@portfolio.errors[:title]).to include("can't be blank")
+    portfolio.title = nil
+    portfolio.valid?
+    expect(portfolio.errors[:title]).to include("can't be blank")
   end
 
   it 'is invalid without body' do
-    @portfolio.body = nil
-    @portfolio.valid?
-    expect(@portfolio.errors[:body]).to include("can't be blank")
+    portfolio.body = nil
+    portfolio.valid?
+    expect(portfolio.errors[:body]).to include("can't be blank")
   end
 
   it "returns portoflio items with subtitle 'Ruby on Rails'" do
