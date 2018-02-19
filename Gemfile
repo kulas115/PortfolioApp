@@ -50,6 +50,7 @@ group :test do
   gem 'launchy', '~> 2.4.3'
   gem 'selenium-webdriver', '~> 3.9.0'
   gem 'factory_bot_rails'
+  # gem 'parallel_tests'
   gem 'shoulda-matchers',
     git: 'https://github.com/thoughtbot/shoulda-matchers.git',
     branch: 'rails-5'
