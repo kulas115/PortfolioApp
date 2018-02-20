@@ -63,6 +63,8 @@ RSpec.configure do |config|
   config.include Warden::Test::Helpers
 end
 
+Capybara.ignore_hidden_elements = false
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
