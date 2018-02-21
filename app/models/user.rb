@@ -22,7 +22,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :blogs
 
-  # after_create :send_welcome_email
+  after_create :send_welcome_email
 
   def first_name
     self.name.split.first
