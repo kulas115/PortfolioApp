@@ -20,9 +20,10 @@ class User < ApplicationRecord
   validates :password, length: { in: 6..20 }
 
   has_many :comments, dependent: :destroy
-
   has_many :blogs
-  
+
+  # after_create :send_welcome_email
+
   def first_name
     self.name.split.first
   end
@@ -42,6 +43,12 @@ class User < ApplicationRecord
       # uncomment the line below to skip the confirmation emails.
       # user.skip_confirmation!
     end
+  end
+
+  private
+
+  def send_welcome_email
+    UserMailer.welcome_email(self).deliver_later
   end
 end
   #def get_facebook_messages
