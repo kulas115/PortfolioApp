@@ -23,11 +23,7 @@ $ash: #b2afac;
 $dust: #959492;
 
 /* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
+
 
 /* Custom default button */
 .btn-secondary,
@@ -307,6 +303,14 @@ margin: auto;
 
 .btn-primary:hover {
   background-color: black;
+}
+
+.link {
+  color: #635959;
+}
+
+.link:hover {
+  color: black;
 }
 
 /* Handle the widths */
