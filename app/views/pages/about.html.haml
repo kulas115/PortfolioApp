@@ -1,0 +1,42 @@
+.inner.cover
+  %h1.cover-heading Who Am I?
+  .row
+    .col-md-12
+      .card-contact-about
+        .card
+          .card-block-left
+            .row
+              .col-md-4.col-sm-12.col-12.heading-black
+                = image_tag "profile.jpg", width: "100%", alt: "Profile image", class: "profile-image"
+                .skills.py-3
+                  %h5 My skills distribution:
+                  - @skills.each do |skill|
+                    %h6= skill.title
+                    .skill
+                      .progress
+                        %div{ :class => "progress-bar, bg-warning", :role => "progressbar", :aria_valuenow => "#{skill.percent_utilized}", aria_valuemax: "100", style: "width: #{skill.percent_utilized}"}
+              .col-md-8.col-sm-12
+                .row
+                .col-md-12
+                  %p.text-left After working in a corporation for almost 2 years, I decided to apply my love of new technology and analytical thinking towards becoming a software engineer. Ever since I was a little boy I was very interested in the hardware side of things but time has come to get into software as well. I've focused my efforts on learning Ruby on Rails framework. I had previous experience with simple HTML sites, CSS and Wordpress but Rails was something totally different for me. After a lot of time spent on tutorials, books and articles I've grasped the basics. Every day I am spending my free time to enhance my skills and learn new things.
+                  %p.text-left Besides coding, I am interested in blockchain technology, hardware ( I've repaired dozens of PCs, notebooks, and bikes) and sports (I really enjoy running with my dog Borys), biking (both MTB and Road), table tennis and basketball.
+                  %p.text-left My hobbies are: collecting shoes, reading books (Dark Tower on top!) and playing board games (Neuroshima Hex, Bloodrage, Kemet and so on).
+                  %p.text-left You can find my projects on #{link_to "GitHub", "https://github.com/kulas115", class: "link"}.
+                  %p.text-left Thanks for the interest in my story!
+                .row
+                  .col-sm-12.col-sm-12.col-md-6.mx-auto
+                    = button_tag "Education", class: "btn btn-primary btn-lg mb-3 button-full-width", data: { toggle: "collapse", target: "#education",}, aria: { expanded: "false", controls: "education"}
+                .row
+                  .col-md-12
+                    .collapse#education
+                      .m-4
+                        %h4 03/2013 - 09/2014
+                        %h6 Cracow University of Technology - Transportation
+                        %p Master of Science in Logistic and Spedition with distinction.
+                      .m-4
+                        %h4 10/2009 - 03/2013
+                        %h6 Cracow University of Technology  - Transportation
+                        %p Bachelor of Science in Exploatation and Management in Transport with distinction
+                      .m-4
+                        %h4 09/2006 - 06/2009
+                        %h6 Secondary School No 1 in Chrzanow (Poland)
