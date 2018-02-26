@@ -5,14 +5,6 @@ module CurrentUserConcern
     super || guest_user
   end
 
-# No object pattern for Guest user - beakes with petergate
-  #def guest_user
-  #  OpenStruct.new(name: "Guest User",
-  #                 first_name: "Guest",
-  #                 last_name: "User",
-  #                 email: "assa@asas.com")
-  #end
-
   def guest_user
     guest =            GuestUser.new
     guest.name =       "Guest User"

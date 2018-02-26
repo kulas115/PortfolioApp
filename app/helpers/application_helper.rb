@@ -59,20 +59,6 @@ module ApplicationHelper
     nav_links.html_safe
   end
 
-  # Generating nav using heredoc (each item on different line)
-
-#  def nav_helper style, tag_type
-#nav_links = <<NAV
-#<#{tag_type}><a href="#{root_path}" class="#{style} #{active? #root_path}">Home</a></#{tag_type}>
-#<#{tag_type}><a href="#{about_path}" class="#{style} #{active? #about_path}">About</a></#{tag_type}>
-#<#{tag_type}><a href="#{contact_path}" class="#{style} #{active? #contact_path}">Contact</a></#{tag_type}>
-#<#{tag_type}><a href="#{blogs_path}" class="#{style} #{active? #blogs_path}">Blog</a></#{tag_type}>
-#<#{tag_type}><a href="#{portfolios_path}" class="#{style} #{active? #portfolios_path}">Portfolio</a></#{tag_type}>
-#NAV
-
-#    nav_links.html_safe
-#  end
-
   def active? path
     "active" if current_page? path
   end
@@ -88,5 +74,4 @@ module ApplicationHelper
   def alert_generator msg
     js add_gritter(msg, title: "Kamil Kula Portfolio", sticky: false)
   end
-
 end
