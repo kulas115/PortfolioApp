@@ -20,6 +20,7 @@
 - Friendly id gem for URL slugs on blog pages
 - Petergate gem for authorization
 - Gritter gem for growl notifications
+- Mobile layout
 
 ### Testing
 
