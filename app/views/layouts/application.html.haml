@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title
+      = @page_title
+    = csrf_meta_tags
+    %meta{name: "keywords", content: "#{@seo_keywords}"}
+    %meta{charset: "urf-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no"}
+    = favicon_link_tag "favicons/kk_128_carbon.png"
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
+    = javascript_include_tag "application", "data-turbolinks-track": "reload"
+  %body{class: "#{controller_name} #{action_name}"}
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+          = render 'shared/application_nav'
+          = yield
+          = render 'shared/application_footer'
+          = alerts
