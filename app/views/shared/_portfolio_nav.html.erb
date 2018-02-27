@@ -1,14 +1,14 @@
 <div class="collapse bg-dark" id="navbarHeader">
   <div class="container">
     <div class="row">
-      <div class="col-sm-8 py-4">
+      <div class="col-sm-8 pt-4 text-center">
         <h4 class="text-white">About</h4>
         <p class="text-muted">Below grid shows all projects I have created so far. Feel free to visit <%= link_to 'my GitHub repository', "https://github.com/kulas115", class: "link" %> to checkout code.</p>
       </div>
-      <div class="col-sm-4 py-4">
-        <h4 class="text-white">Explore</h4>
+      <div class="col-sm-4 pt-4 text-center">
+        <h4 class="text-white mb-4">Explore</h4>
         <ul class="list-unstyled">
-          <%= nav_helper 'text-white', 'li' %>
+          <%= nav_helper 'text-white', 'li', 'mobile-nav' %>
           <li><%= login_helper 'text-white' %></li>
         </ul>
       </div>

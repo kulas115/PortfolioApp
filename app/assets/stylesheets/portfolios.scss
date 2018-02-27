@@ -92,3 +92,9 @@ footer p {
  .link:hover {
    color: white;
  }
+
+ @media (max-width: 767px) {
+   .mobile-nav {
+     margin-bottom: 1.5rem;
+   }
+ }

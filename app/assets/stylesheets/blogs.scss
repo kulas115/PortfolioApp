@@ -61,7 +61,7 @@ h6, .h6 {
 /* Nav links */
 .nav-link {
   position: relative;
-  padding: 1rem;
+  padding: 0;
   font-weight: 500;
   color: #cdddeb;
 }
@@ -115,6 +115,11 @@ h6, .h6 {
   }
 }
 
+@media (max-width: 767px) {
+  .mobile-nav {
+    margin: 1rem;
+  }
+}
 
 /*
  * Main column and sidebar layout
